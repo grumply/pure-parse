@@ -1,0 +1,31 @@
+name:                pure-parse
+version:             0.8.0.0
+homepage:            purehs.org/doc/pure-parse
+license:             BSD3
+license-file:        LICENSE
+author:              Sean Hickman
+maintainer:          sean@grumply.com
+category:            Web
+build-type:          Simple
+cabal-version:       >=1.10
+
+source-repository head
+  type: git
+  location: https://github.com/grumply/pure-parse.git
+
+library
+  exposed-modules:
+      Pure.Data.View.Parse
+
+  build-depends:
+    base,
+    pure-core,
+    pure-txt,
+    pure-lifted
+    
+  if impl(ghcjs)
+    build-depends:
+      ghcjs-base
+
+  hs-source-dirs:      src
+  default-language:    Haskell2010
