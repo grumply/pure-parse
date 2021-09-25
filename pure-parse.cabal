@@ -15,7 +15,7 @@ source-repository head
 
 library
   exposed-modules:
-      Pure.Data.View.Parse
+      Pure.Parse
 
   build-depends:
     base,
